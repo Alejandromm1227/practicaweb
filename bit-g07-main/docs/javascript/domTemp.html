@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM temporal</title>
+    <style>
+      p {
+        padding: 16px;
+        color: white;
+      }
+      .error {
+        background-color: red;
+      }
+      .success {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM (Document Object Model)</h1>
+    <hr />
+    <form>
+      <input type="text" id="nombre" placeholder="Nombre..." />
+      <input type="email" id="email" placeholder="Correo electrónico..." />
+      <textarea id="mensaje" placeholder="Mensaje..."></textarea>
+      <input type="submit" value="Enviar" id="botonEnviar" />
+    </form>
+    <p></p>
+    <hr />
+    <section>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </section>
+    <script>
+      'use strict';
+      const $nombre = document.getElementById('nombre');
+      const $email = document.getElementById('email');
+      const $mensaje = document.getElementById('mensaje');
+      const $botonEnviar = document.getElementById('botonEnviar');
+      const $p = document.querySelector('p');
+
+      /* const $div1 = document.querySelector('div');
+      console.log($div1); */
+
+      const $divs = document.querySelectorAll('div');
+      console.log($divs);
+
+      let nombre = null;
+      let email = null;
+      let mensaje = null;
+
+      $nombre.addEventListener('input', (evento) => {
+        nombre = evento.target.value;
+      });
+
+      $email.addEventListener('input', (evento) => {
+        email = evento.target.value;
+      });
+
+      $mensaje.addEventListener('input', (evento) => {
+        mensaje = evento.target.value;
+      });
+
+      $botonEnviar.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        if (nombre && email && mensaje) {
+          console.log(nombre);
+          console.log(email);
+          console.log(mensaje);
+          $p.classList.add('success');
+          $p.textContent =
+            'Gracias por contactarnos, procesaremos tu solicitud';
+          console.log('mostrar datos del formulario en la consola');
+        } else {
+          $p.classList.add('error');
+          $p.textContent = 'Todos los datos son obligatorios';
+        }
+      });
+    </script>
+  </body>
+</html>
