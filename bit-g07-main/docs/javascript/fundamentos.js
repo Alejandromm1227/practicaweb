@@ -58,37 +58,50 @@ console.log(saludo); */
 
 /* Tipos de dato primitivos */
 // string
+/*
 let miVariable = '';
 miVariable = 'a';
 miVariable = 'abc';
 miVariable = "este es un texto de 'ejemplo 1'";
 miVariable = 'este es un texto de "ejemplo 2"';
 miVariable = `este es un 'texto' de "ejemplo" 3`;
+*/
+
 // number
-miVariable = 10;
+/*
+let miVariable = 10;
 miVariable = 9.5;
 miVariable = 0xff;
 miVariable = 123e5;
 miVariable = NaN;
-/* console.log(miVariable);
-console.log(typeof miVariable); */
+console.log(miVariable);
+console.log(typeof miVariable);
+*/
 // boolean
-miVariable = true;
+/*
+let miVariable = true;
 miVariable = false;
+*/
 // undefined
+/*
 let miVariableSinAsignacion;
-//console.log(miVariableSinAsignacion);
+console.log(miVariableSinAsignacion);
+*/
 // null
-miVariable = null;
-// console.log(miVariable);
+/*
+let miVariable = null;
+console.log(miVariable);
+*/
 
 /* Operador typeof */
+/*
 let entradaUsuario = '123';
-/* console.log(entradaUsuario);
-console.log(typeof entradaUsuario); */
+console.log(entradaUsuario);
+console.log(typeof entradaUsuario);
 entradaUsuario = 123;
-/* console.log(entradaUsuario);
-console.log(typeof entradaUsuario); */
+console.log(entradaUsuario);
+console.log(typeof entradaUsuario);
+*/
 
 /* const miString = 'hola';
 console.log(miString);
@@ -220,6 +233,30 @@ while (centinela === true) {
 /* do {
   console.log('DO WHILE ejecutando contenido del bloque');
 } while (centinela === true); */
+
+/* const nombres = ["john", "jane", "pepita"]
+for(let nombre of nombres){
+  console.log(nombre);
+} */
+
+/* const credenciales = {
+  nombre: "Pepita",
+  email: "pepita@bit.com",
+  contrasena: "123"
+}
+for(let llave in credenciales){
+  console.log(credenciales[llave]);
+} */
+
+/* const miMatriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+for (let fila = 0; fila < miMatriz.length; fila++) {
+  const f = miMatriz[fila];
+  console.log("fila: ", f);
+  for(let columna = 0; columna < f.length; columna++){
+    const c = f[columna];
+    console.log("columna: ", c);
+  }
+} */
 
 /* Operadores */
 // Concatenación
@@ -450,7 +487,7 @@ funcionAsincrona(); */
 }
 funcionSincrona(); */
 
-// Métodos integrados
+// Propiedades y Métodos integrados
 // RegExp (Expresiones Regulares)
 /* const expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 console.log('prueba@gmail.com');
@@ -499,4 +536,143 @@ console.log('javascript'.valueOf());
 const myString = new String('hola');
 console.log(myString);
 console.log(myString.valueOf());
+*/
+
+// Number
+/*
+console.log(123);
+console.log(1.5);
+console.log(8 - 4);
+console.log(2.5e3);
+console.log(0xa);
+console.log(0o12);
+console.log(0b1010);
+console.log(new Number(10));
+console.log(NaN);
+console.log(Infinity);
+console.log(-Infinity);
+console.log(Number.EPSILON);
+console.log(Number.MAX_VALUE);
+console.log(Number.MIN_VALUE);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+console.log(Number.POSITIVE_INFINITY);
+console.log(Number.NEGATIVE_INFINITY);
+console.log(Number.isFinite(10));
+console.log(Number.isInteger(10));
+console.log(Number.isInteger(10.5));
+console.log(Number.isSafeInteger(10));
+console.log(isNaN(10));
+console.log(isNaN("hola"));
+miVariable = 1234;
+console.log(miVariable.toExponential());
+console.log(miVariable.toExponential(1));
+console.log(miVariable.toExponential(20));
+miVariable = 10.7896546
+console.log(miVariable.toFixed());
+console.log(miVariable.toFixed(2));
+console.log(miVariable.toString());
+console.log(parseInt(miVariable));
+miVariable = 1234;
+console.log(parseFloat(miVariable));
+miVariable = 999999999999999;
+miVariable = 1.99999999999999;
+miVariable = 0.2 + 0.1
+miVariable = (0.2 * 10 + 0.1 * 10) / 10
+console.log(miVariable);
+*/
+
+// Boolean
+/*
+console.log(true);
+console.log(false);
+console.log(8 > 4);
+console.log(8 < 4);
+miVariable = true;
+miVariable = false;
+miVariable = new Boolean(true)
+miVariable = Boolean.prototype.name = true;
+console.log(miVariable);
+console.log(miVariable.toString());
+console.log(miVariable.valueOf());
+*/
+
+// Array
+/*
+let miArreglo = new Array();
+miArreglo = new Array("a", "b", "c");
+miArreglo = [];
+miArreglo = ["a", "b", "c"];
+miArreglo = ["a", 1, true, [], {}, null];
+console.log(miArreglo);
+console.log(miArreglo.length);
+*/
+let resultado = null;
+const miString = "hola";
+const mujeres = ["jane", "pepita", "anne", "emma" ]
+const hombres = ["john", "fulanito", "juan", "javier"];
+const edades = [1, 21, 25, 18, 32, 17, 5, 40, 2, 10];
+const mayoresDeEdad = [21, 18, 32, 45]
+const miArreglo = [1, 2, 3];
+const miMatriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+/*
+console.log(mujeres.at(1));
+console.log(mujeres.concat(hombres));
+mujeres.copyWithin(2, 0)
+resultado = mujeres.entries();
+console.log(resultado);
+for (const elemento of resultado) {
+  console.log(elemento);
+}
+resultado = mayoresDeEdad.every(esMayorDeEdad)
+mujeres.fill("Elizabeth")
+
+function esMayorDeEdad(edad) {
+  return edad >= 18;
+}
+resultado = edades.filter((edad)=> edad >= 18);
+resultado = edades.find((edad)=> edad >= 18);
+resultado = edades.findIndex((edad)=> edad >= 18);
+resultado = edades.findLast((edad)=> edad >= 18);
+resultado = edades.findLastIndex((edad)=> edad >= 18);
+resultado = miMatriz.flat();
+resultado = numeros.flatMap((numero)=> numero * 2);
+numeros.forEach((numero)=>{
+  let n = numero += "---";
+  console.log(n);
+
+});
+resultado = Array.from("AEIUO")
+resultado = hombres.includes("Juan")
+resultado = hombres.indexOf("juan");
+resultado = Array.isArray(miString);
+resultado = Array.isArray(miArreglo);
+resultado = hombres.join();
+resultado = hombres.join(" ");
+resultado = hombres.join(" y ");
+resultado = hombres.keys();
+*/
+
+// JSON
+/*
+let miStringJson = `
+{
+  "name": "pepita",
+  "email": "pepita@bit.institute",
+  "password": "abc123"
+}
+`;
+console.log(miStringJson);
+console.log(typeof miStringJson);
+console.log(miStringJson.name);
+// Deserialize o deserealizar
+const miObjetoJs = JSON.parse(miStringJson)
+console.log(miObjetoJs);
+console.log(miObjetoJs.name);
+// Serialize o serializar
+miStringJson = JSON.stringify(miObjetoJs)
+console.log(miStringJson);
+console.log(typeof miStringJson);
+console.log(miStringJson.name);
 */
