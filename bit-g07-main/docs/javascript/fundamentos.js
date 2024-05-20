@@ -433,6 +433,14 @@ console.log(retornado); */
 miFuncion();
 miFuncion(100); */
 
+// Argumentos Rest
+/* function miFuncion(...entrada) {
+  console.log("entrada: ", entrada);
+}
+miFuncion();
+miFuncion(1);
+miFuncion(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); */
+
 // Promesa
 /* function miPromesa() {
   return new Promise((resolver, rechazar) => {

@@ -1,0 +1,68 @@
+<p>fundamentos works!</p>
+<hr>
+<section>
+    <h2>Propiedades e interpolación</h2>
+    <p>Estoy utilizando el framework: {{nombreFramework}} con base en {{nombreLenguaje}}</p>
+    <p>&copy; {{anio}}</p>
+    <p>4 x 2 = {{4 * 2}}</p>
+    <p>En tu carrito tienes {{carrito.length}} productos</p>
+</section>
+<hr>
+<section>
+    <h2>Control de flujo</h2>
+    @if(estaLogueado){
+        <p>Hola, bienvenido!</p>
+        <p>Usted está logueado.</p>
+    }@else {
+        <p>Por favor inicie sesión</p>
+        <p>Usted NO está logueado.</p>
+    }
+    <p>Productos en el carrito:</p>
+    <ul>
+        @for(producto of carrito; track $index){
+            <li>{{producto}}</li>
+        }
+    </ul>
+    <ol>
+        @for(framework of frameworks; track framework.id){
+            <li>{{framework.nombre}}</li>
+        }
+    </ol>
+</section>
+<hr>
+<section>
+    <h2>Enlace de atributo/propiedad</h2>
+    <button type="button" [disabled]="!estaLogueado">Cerrar sesión</button>
+</section>
+<hr>
+<section>
+    <h2>Manejo de eventos</h2>
+    <button type="button" (click)="manejarClick()">Manejar click</button>
+    <div class="caja {{colorFondo}}" (mouseover)="manejarMouseover()" (mousedown)="manejarMousedown()" (mouseup)="manejarMouseup()"></div>
+</section>
+<hr>
+<section>
+    <h2>Pasando datos</h2>
+    <app-padre></app-padre>
+</section>
+<hr>
+<section>
+    <h2>Formularios</h2>
+    <div>
+        <h3>Formularios template-driven</h3>
+        <form>
+            <label>Framework favorito
+                <input type="text" placeholder="Escriba su framework favorito" name="frameworkFavorito" [(ngModel)]="frameworkFavorito">
+            </label>
+            <button type="button" (click)="mostrarFrameworkFavorito()">Ver framework favorito</button>
+        </form>
+    </div>
+    <div>
+        <h3>Formularios reactivos</h3>
+        <form [formGroup]="formularioCredenciales" (ngSubmit)="manejarEnvio()">
+            <input type="text" placeholder="usuario" formControlName="usuario">
+            <input type="password" placeholder="contraseña" formControlName="contrasenia">
+            <button>Iniciar sesión</button>
+        </form>
+    </div>
+</section>
