@@ -1,4 +1,4 @@
-import { Component, EventEmitter, output, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-interfaz',
@@ -9,8 +9,17 @@ import { Component, EventEmitter, output, Output } from '@angular/core';
 })
 export class InterfazComponent {
   
-  @Output() pasarnumero: EventEmitter<number> = new EventEmitter<number>();
+  @Output() pasarnumero = new EventEmitter<number>();
   numero: number=0;
+  suma () {
+    this.numero=this.numero+1;
+  }
+  resta () {
+    this.numero=this.numero-1;
+  }
+  reset () {
+    this.numero = 0;
+  }
   pasarNumero (){
     this.pasarnumero.emit(this.numero);
   }

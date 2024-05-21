@@ -4,8 +4,8 @@
     <p> {{numero}} </p>
 </div>
 
-<div class="box2">
-<button (click)="numero=numero+1"> Add </button>
-<button (click)="numero=0"> Reset </button>
-<button (click)="numero=numero-1"> Subtract </button>
+<div (click)="pasarNumero()" class="box2">
+<button (click)="suma()"> Add </    button>
+<button (click)="reset()"> Reset </button>
+<button (click)="resta()"> Subtract </button>
 </div>

@@ -12,6 +12,7 @@ import { ThisReceiver } from '@angular/compiler';
 export class InterfazPadreComponent {
   num : number = 0;
     multiplicarNumero(value:number){
-      this.num = value;
+      this.num = value*2;
+     
     }
 }
